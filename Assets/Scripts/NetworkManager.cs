@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -16,7 +15,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void ConnectToServer()
     {
         PhotonNetwork.ConnectUsingSettings();
-        Debug.Log("Try Connect To Server...");
+        Debug.Log("Try Connect To Server......");
     }
 
     public override void OnConnectedToMaster() 
