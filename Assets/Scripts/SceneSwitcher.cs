@@ -7,9 +7,9 @@ public class SceneSwitcher : MonoBehaviour
 {
     public string scene;
     // Start is called before the first frame update
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             switchScene(scene);
         }
