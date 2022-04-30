@@ -11,13 +11,19 @@ public class SceneSwitcher : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+             gameObject.GetComponent<Renderer> ().material.color = Color.green;
             switchScene(scene);
         }
     }
 
-    // Update is called once per frame
-    void switchScene(string scene)
+    void OnTriggerExit(Collider other)
     {
-        SceneManager.LoadScene(scene);
+         gameObject.GetComponent<Renderer> ().material.color = Color.white;
+    }
+
+    // Update is called once per frame
+    public void switchScene(string scene)
+    {
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 }
