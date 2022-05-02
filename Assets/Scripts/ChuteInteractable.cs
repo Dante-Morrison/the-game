@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ChuteInteractable : MonoBehaviour
 {
+    [Tooltip("the object that will spawn when the player puts their hand in the collider")]
+    public GameObject gameObject;
+    [Tooltip("the location the object will spawn from")]
+    public GameObject spawnPoint;
     protected bool spawnObj = false;
     private bool canSpawn = true;
 
@@ -20,6 +24,11 @@ public class ChuteInteractable : MonoBehaviour
             canSpawn = false;
             spawnObj = true;
         }
+    }
+
+    void spawnObjectInChute()
+    {
+        Instantiate(gameObject, spawnPoint.transform.position, Quaternion.identity);
     }
 
     IEnumerator objectSpawnCooldown() 
