@@ -132,7 +132,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1338853364675896627, guid: db40d65bf3d18d443a04cd28da61d04b, type: 3}
       propertyPath: m_Text
-      value: scene
+      value: 'Hike
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1338853365281447354, guid: db40d65bf3d18d443a04cd28da61d04b, type: 3}
       propertyPath: m_Name
