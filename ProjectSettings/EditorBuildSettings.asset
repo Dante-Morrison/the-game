@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
-    guid: b4e77e8d9116b004b9e60bf2c8cc7efc
+    path: Assets/Scenes/noVR/Main Menu NoVR.unity
+    guid: c72bccd41ed77874994476446ca317b5
   - enabled: 1
-    path: Assets/Scenes/Sandbox.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/noVR/SandboxNoVR.unity
+    guid: 21af498565cf3a340a62a33c20f277a9
   - enabled: 1
-    path: Assets/Scenes/Hike.unity
-    guid: 779a6a322f34cbb4eb6cf0922f670716
+    path: Assets/Scenes/noVR/HikeNoVR.unity
+    guid: 133549e7f81ec6545b9a1c6beb4d2b9e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3b2254190ba1a3946b444a34e5512032, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 526ac3d4289ca4f43a7a83db36d9d3b9, type: 2}
