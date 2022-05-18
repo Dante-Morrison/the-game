@@ -5,22 +5,18 @@ using UnityEngine;
 public class ChuteInteractable : MonoBehaviour
 {
     [Tooltip("the object that will spawn when the player puts their hand in the collider")]
-    public GameObject gameObject;
+    public GameObject instanceObject;
     [Tooltip("the location the object will spawn from")]
     public GameObject spawnPoint;
     protected bool spawnObj = false;
     private bool canSpawn = true;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnTriggerEnter()
+    void OnCollisionEnter()
     {
         if (canSpawn == true)
         {
+            spawnObjectInChute();
+            Debug.Log("Spawn Object Called");
             canSpawn = false;
             spawnObj = true;
         }
@@ -28,7 +24,7 @@ public class ChuteInteractable : MonoBehaviour
 
     void spawnObjectInChute()
     {
-        Instantiate(gameObject, spawnPoint.transform.position, Quaternion.identity);
+        Instantiate(instanceObject, spawnPoint.transform.position, Quaternion.identity);
     }
 
     IEnumerator objectSpawnCooldown() 
